@@ -1,0 +1,19 @@
+/* Assinatura da FBuilder: discreta em repouso, nítida no hover e no foco de teclado. */
+.fbuilder-signature {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px; /* alvo de toque confortável */
+  opacity: var(--fbuilder-signature-opacity, 0.7);
+  transition: opacity 300ms ease;
+}
+
+.fbuilder-signature:hover,
+.fbuilder-signature:focus-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fbuilder-signature {
+    transition-duration: 0.01ms;
+  }
+}

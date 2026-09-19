@@ -1,0 +1,33 @@
+{
+  "name": "@fbuilder/assinatura",
+  "version": "1.0.0",
+  "description": "Selo de assinatura da FBuilder para o rodapé de projetos React.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./assinatura.css": "./assinatura.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "assinatura.css",
+    "README.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FBuilder-Brasil/assinatura.git"
+  }
+}
