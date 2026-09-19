@@ -11,6 +11,12 @@ export interface FBuilderSignatureProps {
   href?: string;
   /** Nome acessível do link, anunciado por leitores de tela. */
   label?: string;
+  /**
+   * Caminho de uma cópia da arte servida pelo próprio site, por exemplo
+   * '/assinatura/fbuilder-by.png'. Sem isso, usa a arte embutida no pacote
+   * (data URI), que dispensa arquivo mas pesa ~12 KB em cada página.
+   */
+  src?: string;
 }
 
 /** Selo "By | F" da FBuilder para o rodapé. Sem hooks: funciona em Server Components. */

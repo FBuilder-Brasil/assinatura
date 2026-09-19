@@ -10,6 +10,9 @@ export function FBuilderSignature({
   restingOpacity = 0.7,
   href = 'https://fbuilder.com.br/',
   label = 'Site criado pela FBuilder (abre em nova aba)',
+  // Caminho de uma cópia servida pelo próprio site (ex.: '/assinatura/fbuilder-by.png'):
+  // evita repetir os ~12 KB do data URI em cada página e ganha cache do navegador.
+  src = SEAL,
 } = {}) {
   return h(
     'a',
@@ -23,7 +26,7 @@ export function FBuilderSignature({
       style: { '--fbuilder-signature-opacity': String(restingOpacity) },
     },
     h('img', {
-      src: SEAL,
+      src,
       alt: '',
       width: 170,
       height: 84,

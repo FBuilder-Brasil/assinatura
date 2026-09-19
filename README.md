@@ -42,6 +42,19 @@ O componente não usa hooks, então funciona em Server Components (Next.js App R
 | `restingOpacity` | `0.7` | Opacidade em repouso. Em fundo claro, `0.8` costuma ficar melhor. |
 | `href` | `https://fbuilder.com.br/` | Destino do link. |
 | `label` | `Site criado pela FBuilder (abre em nova aba)` | Nome acessível do link. |
+| `src` | arte embutida | Caminho de uma cópia servida pelo site (ex.: `/assinatura/fbuilder-by.png`). Veja abaixo. |
+
+## Arte embutida ou arquivo servido pelo site
+
+Por padrão a arte vai embutida no JavaScript (data URI): instala e funciona, sem copiar nada. O custo é cerca de 12 KB a mais no HTML **de cada página**, porque base64 não comprime nem é reaproveitado entre páginas.
+
+Em sites com várias páginas, copie `arte/fbuilder-by.png` deste repositório para o `public/` do projeto e aponte a prop:
+
+```tsx
+<FBuilderSignature src="/assinatura/fbuilder-by.png" />
+```
+
+Assim o navegador baixa a imagem uma vez e guarda em cache.
 
 ## Acessibilidade
 
