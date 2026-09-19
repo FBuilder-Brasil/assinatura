@@ -58,6 +58,10 @@ git push --follow-tags
 
 Depois, nos projetos, aponte a dependência para a tag nova.
 
+## Arte
+
+`arte/fbuilder-by-original.png` é o arquivo entregue pelo designer; `arte/fbuilder-by.png` é a versão recortada e sem a sombra suave, que está embutida em `index.js` como data URI. Esses arquivos ficam fora do pacote publicado (veja `files` no `package.json`), então não pesam nos projetos.
+
 ## Trocar o selo
 
 Hoje a arte é um PNG de 170 × 84 px embutido em `index.js` (cerca de 12 KB em base64). Se houver a versão em vetor (SVG), vale trocar: o peso cai para menos de 2 KB e o selo fica nítido em qualquer tamanho.
